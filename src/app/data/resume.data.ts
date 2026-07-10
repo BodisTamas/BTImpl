@@ -255,7 +255,7 @@ const RESUME_HU: ResumeData = {
       title: 'Megújítási projekt',
       date: '2024 — jelenleg',
       description:
-        'Egy scrum csapat tagjaként veszek részt a bank fiókhálózati ügyfél-azonosításának ' +
+        'Egy scrum csapat tagjaként veszek részt egy bank fiókhálózati ügyfél-azonosításának ' +
         'megújításában. A legacy Struts és Java EE alapú megoldást egy Spring ' +
         'Boot alapú rendszerré alakítottuk át, Angular felhasználói felülettel. A megoldás ' +
         'mikroszolgáltatás-architektúrát használ, amelyet az OpenShift platformon valósítottunk meg.',
@@ -276,7 +276,7 @@ const RESUME_HU: ResumeData = {
       title: 'Különböző integrációs projektek',
       date: '2017 — jelenleg',
       description:
-        'Java fejlesztőként támogatom az anyavállalat rendszereihez kapcsolódó különböző ' +
+        'Java fejlesztőként támogatom a megrendelő anyavállalati rendszereihez kapcsolódó különböző ' +
         'integrációkat. Adaptereket írtok a helyi és a távoli rendszerek között, valamint ' +
         'mapping- és üzleti logikát fejlesztetek.',
       stack: ['Java EE', 'DB2', 'MSSQL', 'Agile', 'Docker', 'Clean Code', 'Websphere', 'JBoss'],
