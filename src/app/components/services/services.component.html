@@ -1,0 +1,19 @@
+<section id="experiences" class="container py-5">
+  <div class="mb-4">
+    <span class="section-label">// {{ text().nav.experiences }}</span>
+  </div>
+
+  <div class="row g-3">
+    @for (service of services(); track service.title) {
+      <div class="col-12" [class.col-md-8]="service.wide" [class.col-md-4]="!service.wide">
+        <div class="bento-card h-100 p-4">
+          <div class="bento-icon mb-4">
+            <app-icon [name]="service.icon" [size]="20" />
+          </div>
+          <h3 class="mb-3">{{ service.title }}</h3>
+          <p class="m-0">{{ service.description }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>

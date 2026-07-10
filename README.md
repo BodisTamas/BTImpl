@@ -1,69 +1,57 @@
-# Btimpl
+# BTImpl — Personal Site (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+Personal site for **Bódis Tamás**, refactored from a single `btimpl.html` into a
+standalone-component Angular 17 application, styled to the **BTImpl Brand Kit v1.0**.
 
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Run
 
 ```bash
-ng generate component component-name
+npm install
+npm start        # ng serve → http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Build for production:
 
 ```bash
-ng generate --help
+npm run build    # outputs to dist/btimpl-web
 ```
 
-## Building
+> Requires Node 18.13+ / 20.9+ (Angular 17).
 
-To build the project run:
+## Structure
 
-```bash
-ng build
+```
+src/
+  index.html              App shell + fonts + favicon
+  main.ts                 Bootstraps AppComponent (standalone)
+  styles.css              Global theme — brand tokens + shared primitives
+  favicon.svg             BTImpl app icon
+  assets/                 Logo marks, icons, social images
+  app/
+    app.component.ts      Page layout (hero → profile → experience → skills → footer)
+    data/resume.data.ts   All content (profile, jobs, skills, education)
+    components/
+      logo.component.ts        The BTImpl mark (scoped SVG gradients)
+      hero.component.ts        Brand lockup, name, role, contact buttons
+      profile.component.ts     Profile summary
+      experience.component.ts  Work history cards
+      skills.component.ts      Core competencies + education
+      footer.component.ts      Footer with mark + copyright
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Branding
 
-## Running unit tests
+All colors, typography, and the logo come from the BTImpl Brand Kit:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- **Fonts** — Poppins (display), IBM Plex Sans (body), JetBrains Mono (labels/code)
+- **Brand colors** — Indigo `#5A6CF7`, Royal Blue `#4577F0`, Azure `#3D93E8`, Cyan `#58CBFB`
+- **Neutrals** — Ink `#0A1228`, Deep `#060C1B`, Surface `#0D1530`, Mist `#9AA6C9`, White `#F4F7FF`
 
-```bash
-ng test
-```
+Tokens live as CSS custom properties in `src/styles.css`.
 
-## Running end-to-end tests
+## Notes
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-build
-```bash
-ng build --base-href /   
-```
-
-deploy
-```bash
-npx angular-cli-ghpages --dir=dist/btimpl/browser
-```
+- `preview.html` (repo root) is a static, single-file mirror of the rendered app —
+  open it directly in a browser to see the result without running the dev server.
+  It is not part of the Angular build.
+- Content is centralized in `src/app/data/resume.data.ts`; edit there to update text.

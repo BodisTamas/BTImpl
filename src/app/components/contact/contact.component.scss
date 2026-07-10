@@ -1,0 +1,25 @@
+.contact-card {
+  max-width: 700px;
+  border-radius: 24px;
+}
+.lead-text {
+  color: var(--soft);
+  max-width: 500px;
+}
+.btn-brand {
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  background: linear-gradient(135deg, var(--indigo), var(--cyan));
+  border: none;
+  box-shadow: 0 8px 22px rgba(69, 119, 240, 0.35);
+  transition: transform 0.2s;
+}
+.btn-brand:hover,
+.btn-brand:focus {
+  color: #fff;
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--indigo), var(--cyan));
+  box-shadow: 0 8px 22px rgba(69, 119, 240, 0.35);
+}

@@ -1,0 +1,40 @@
+<section id="skills" class="container py-5">
+  <div class="mb-4">
+    <span class="section-label">// {{ text().nav.skills }}</span>
+  </div>
+
+  <h3 class="subsection-title mb-4">{{ text().skills.skillsTitle }}</h3>
+  <div class="row g-3 mb-5">
+    @for (group of skillGroups(); track group.title) {
+      <div class="col-12 col-md-4">
+        <div class="surface-card h-100 p-4">
+          <h4 class="skill-group-title mb-3">{{ group.title }}</h4>
+          <div class="d-flex flex-wrap gap-2">
+            @for (skill of group.skills; track skill) {
+              <span class="tech-pill d-inline-flex align-items-center gap-2 px-3 py-2">
+                <app-icon [name]="techIcon(skill)" [size]="12" />{{ skill }}
+              </span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <h3 class="subsection-title mb-4">{{ text().skills.certificatesTitle }}</h3>
+
+  <div class="surface-card p-4">
+    @for (cert of certificates(); track cert.title; let first = $first) {
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between align-items-start gap-3"
+        [class.cert-divider]="!first"
+      >
+        <div>
+          <h3 class="skill-title m-0">{{ cert.title }}</h3>
+          <div class="school mt-1">{{ cert.issuer }}</div>
+        </div>
+        <div class="job-date px-3 py-2">{{ cert.date }}</div>
+      </div>
+    }
+  </div>
+</section>

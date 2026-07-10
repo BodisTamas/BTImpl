@@ -1,0 +1,20 @@
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  color: #fff;
+  border: none;
+  background: linear-gradient(135deg, var(--indigo), var(--cyan));
+  box-shadow: 0 8px 22px rgba(69, 119, 240, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.back-to-top:hover,
+.back-to-top:focus {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(69, 119, 240, 0.45);
+}

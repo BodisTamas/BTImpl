@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md sticky-top">
+  <div class="container-fluid px-3 px-md-4 py-2">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <app-logo [height]="36" />
+      <span class="brand-name">{{ profile().brand }}</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      [attr.aria-expanded]="mobileNavOpen()"
+      aria-controls="navbarNav"
+      [attr.aria-label]="text().aria.toggleNav"
+      (click)="toggleMobileNav()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [class.show]="mobileNavOpen()" id="navbarNav">
+      <ul class="navbar-nav ms-md-auto align-items-md-center gap-md-4 py-3 py-md-0">
+        <li class="nav-item"><a class="nav-link" href="#experiences" (click)="closeMobileNav()">{{ text().nav.experiences }}</a></li>
+        @if (publications().length > 0) {
+        <li class="nav-item"><a class="nav-link" href="#publications" (click)="closeMobileNav()">{{ text().nav.publications }}</a></li>
+        }
+        <li class="nav-item"><a class="nav-link" href="#projects" (click)="closeMobileNav()">{{ text().nav.projects }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" (click)="closeMobileNav()">{{ text().nav.about }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills" (click)="closeMobileNav()">{{ text().nav.skills }}</a></li>
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn locale-toggle p-0"
+            [attr.aria-label]="text().aria.switchLocale"
+            (click)="toggleLocale()"
+          >
+            <img
+              class="locale-toggle-flag"
+              [src]="'https://flagcdn.com/w40/' + nextLocaleFlagCode() + '.png'"
+              alt=""
+            />
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary btn-cta d-inline-flex align-items-center gap-2 px-3 py-2 rounded-2" href="#contact" (click)="closeMobileNav()">
+            <app-icon name="mail" [size]="14" />
+            {{ text().nav.contact }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

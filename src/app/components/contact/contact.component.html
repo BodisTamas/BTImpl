@@ -1,0 +1,11 @@
+<section id="contact" class="container py-5">
+  <div class="surface-card contact-card text-center p-4 p-md-5 mx-auto">
+    <span class="section-label">// {{ text().nav.contact }}</span>
+    <h2 class="section-title my-3">{{ text().contact.title }}</h2>
+    <p class="lead-text mx-auto mb-4">{{ text().contact.subtitle }}</p>
+    <a class="btn btn-primary btn-brand d-inline-flex align-items-center gap-2 px-4 py-3 rounded-3" [href]="'mailto:' + profile().email">
+      <app-icon name="mail" [size]="18" />
+      {{ profile().email }}
+    </a>
+  </div>
+</section>

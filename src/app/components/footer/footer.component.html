@@ -1,0 +1,7 @@
+<footer class="d-flex justify-content-center align-items-center flex-wrap gap-3 text-center px-3 py-4">
+  <app-logo [height]="24" />
+  <div class="d-flex flex-column gap-1">
+    <span class="motto">{{ profile().tagline }}</span>
+    <span class="copy">&copy; {{ year }} {{ profile().brand }} · {{ profile().name }}. {{ text().footer.rights }}</span>
+  </div>
+</footer>

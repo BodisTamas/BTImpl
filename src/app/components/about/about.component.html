@@ -1,0 +1,16 @@
+<section id="about" class="container py-5">
+  <span class="section-label">// {{ text().nav.about }}</span>
+
+  <div class="who surface-card p-4 mt-2 d-flex flex-column flex-sm-row align-items-center align-items-sm-stretch gap-4">
+    <img class="who-photo" src="assets/me.jpg" [alt]="profile().name" />
+    <div class="flex-fill">
+      <h3 class="who-name mb-2">{{ profile().name }}</h3>
+      <div class="role">{{ profile().role }}</div>
+      <p class="summary mt-3 mb-0">{{ profile().heroSummary }}</p>
+      <a class="linkedin-link mt-3" [href]="profile().linkedin" target="_blank" rel="noopener">
+        <app-icon name="linkedin" [size]="14" />
+        {{ text().about.connectLinkedin }}
+      </a>
+    </div>
+  </div>
+</section>

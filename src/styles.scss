@@ -1,0 +1,84 @@
+@use 'styles/variables';
+
+:root {
+  /* Neutrals */
+  --ink: #0A1228;
+  --deep: #060C1B;
+  --surface: #0D1530;
+  --mist: #9AA6C9;
+  --soft: #C7D0E8;
+  --white: #F4F7FF;
+  --border: #1E2A47;
+
+  /* Brand colors */
+  --indigo: #5A6CF7;
+  --royal-blue: #4577F0;
+  --azure: #3D93E8;
+  --cyan: #58CBFB;
+  --signature: linear-gradient(135deg, #5A6CF7 0%, #4577F0 42%, #58CBFB 100%);
+
+  /* Typography */
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+}
+
+body {
+  background: var(--deep);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--royal-blue); color: #fff; }
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 { font-family: var(--font-display); }
+
+/* ---------- Shared brand primitives (not layout/spacing — see Bootstrap utilities for that) ---------- */
+.section-label {
+  font-family: var(--font-code);
+  font-size: 12px;
+  letter-spacing: 0.34em;
+  color: var(--cyan);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: clamp(26px, 5vw, 34px);
+  letter-spacing: -0.02em;
+}
+
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.tech-pill {
+  font-family: var(--font-code);
+  font-size: 13px;
+  line-height: 1.477;
+  color: var(--cyan);
+  background: rgba(88, 203, 251, 0.1);
+  border: 1px solid #2F66C9;
+  border-radius: 8px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.tech-pill:hover {
+  background: rgba(88, 203, 251, 0.2);
+  border-color: var(--cyan);
+}
+
+.job-date {
+  font-family: var(--font-code);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--mist);
+  text-transform: uppercase;
+  background: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}

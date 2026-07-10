@@ -1,0 +1,16 @@
+// Bootstrap variable overrides, mapped from the BTImpl brand tokens.
+// Must precede the Bootstrap import — Bootstrap reads these at compile time.
+$primary: #5A6CF7;
+$secondary: #58CBFB;
+$body-bg: #060C1B;
+$body-color: #F4F7FF;
+$border-color: #1E2A47;
+
+$font-family-sans-serif: 'IBM Plex Sans', system-ui, sans-serif;
+$font-family-monospace: 'JetBrains Mono', monospace;
+$headings-font-family: 'Poppins', sans-serif;
+$headings-margin-bottom: 0;
+
+$enable-negative-margins: true;
+
+@import 'bootstrap/scss/bootstrap';

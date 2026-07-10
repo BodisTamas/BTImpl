@@ -1,0 +1,35 @@
+.who-photo {
+  width: 220px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cyan);
+  font-family: var(--font-code);
+  font-size: 13px;
+  text-decoration: none;
+}
+.linkedin-link:hover { text-decoration: underline; }
+.who-name {
+  font-weight: 600;
+  font-size: clamp(24px, 4vw, 30px);
+  color: var(--white);
+}
+.role {
+  font-family: var(--font-code);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  color: var(--cyan);
+  text-transform: uppercase;
+}
+.summary {
+  font-size: 16px;
+  color: var(--mist);
+  line-height: 1.7;
+}

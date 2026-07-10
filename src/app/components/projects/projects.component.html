@@ -1,0 +1,26 @@
+<section id="projects" class="container py-5">
+  <div class="mb-4">
+    <span class="section-label">// {{ text().sections.projects }}</span>
+  </div>
+
+  <div class="row g-4">
+    @for (project of projects(); track project.title) {
+      <div class="col-12 col-md-6">
+        <div class="surface-card h-100 p-4">
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start gap-3 mb-3">
+            <h3 class="project-title m-0">{{ project.title }}</h3>
+            <div class="job-date px-3 py-2">{{ project.date }}</div>
+          </div>
+          <p class="project-description mb-0">{{ project.description }}</p>
+          <div class="d-flex flex-wrap gap-2 stack-divider mt-4 pt-4">
+            @for (tech of project.stack; track tech) {
+              <span class="tech-pill d-inline-flex align-items-center gap-2 px-3 py-2">
+                <app-icon [name]="techIcon(tech)" [size]="12" />{{ tech }}
+              </span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

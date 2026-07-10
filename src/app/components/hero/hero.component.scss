@@ -1,0 +1,47 @@
+.hero {
+  padding-top: 180px;
+  padding-bottom: 200px;
+  background: radial-gradient(120% 90% at 18% 8%, #14224A 0%, #0A1228 55%, #070E22 100%);
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(44px, 8vw, 60px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+.tagline {
+  font-size: clamp(15px, 3vw, 20px);
+  color: var(--soft);
+}
+.btn-brand {
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  background: linear-gradient(135deg, var(--indigo), var(--cyan));
+  border: none;
+  box-shadow: 0 8px 22px rgba(69, 119, 240, 0.35);
+  transition: transform 0.2s;
+}
+.btn-brand:hover,
+.btn-brand:focus {
+  color: #fff;
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--indigo), var(--cyan));
+}
+.btn-outline-brand {
+  color: var(--cyan);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid #2F66C9;
+  background: rgba(88, 203, 251, 0.06);
+  transition: background 0.2s;
+}
+.btn-outline-brand:hover,
+.btn-outline-brand:focus {
+  color: var(--cyan);
+  background: rgba(88, 203, 251, 0.12);
+}

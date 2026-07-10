@@ -1,0 +1,5 @@
+@if (simpleIconSlug) {
+  <img [src]="simpleIconUrl" [style.width.px]="size()" [style.height.px]="size()" alt="" />
+} @else {
+  <i [class]="faClass" [style.fontSize.px]="size()" aria-hidden="true"></i>
+}

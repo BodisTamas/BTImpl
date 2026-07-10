@@ -1,0 +1,20 @@
+<svg [attr.viewBox]="'-46 0 246 264'" [style.height.px]="height()" aria-label="BTImpl logo mark" role="img">
+  <defs>
+    <linearGradient [attr.id]="topId" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#5A6CF7" />
+      <stop offset="1" stop-color="#4577F0" />
+    </linearGradient>
+    <linearGradient [attr.id]="botId" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3D93E8" />
+      <stop offset="1" stop-color="#58CBFB" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M18 0 H130 A55 55 0 0 1 130 110 H18 A18 18 0 0 1 0 92 V18 A18 18 0 0 1 18 0 Z"
+    [attr.fill]="'url(#' + topId + ')'"
+    transform="skewX(-9)" />
+  <path
+    d="M18 126 H130 A69 69 0 0 1 130 264 H18 A18 18 0 0 1 0 246 V144 A18 18 0 0 1 18 126 Z"
+    [attr.fill]="'url(#' + botId + ')'"
+    transform="skewX(-9)" />
+</svg>

@@ -1,0 +1,10 @@
+@if (visible()) {
+  <button
+    type="button"
+    class="back-to-top btn d-inline-flex align-items-center justify-content-center rounded-circle"
+    [attr.aria-label]="text().aria.scrollToTop"
+    (click)="scrollToTop()"
+  >
+    <app-icon name="chevronUp" [size]="16" />
+  </button>
+}
