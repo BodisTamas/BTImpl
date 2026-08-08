@@ -33,8 +33,10 @@ export interface Service {
 export interface Publication {
   tag: string;
   title: string;
+  /** Rendered via [innerHTML] — safe formatting tags like <b>, <strong>, <ul>/<li>, <p> are supported. */
   description: string;
   linkText: string;
+  link: string;
   accent?: boolean;
 }
 
@@ -117,16 +119,22 @@ const RESUME_EN: ResumeData = {
     },
   ],
   publications: [
-    // {
-    //   tag: 'CASE STUDY',
-    //   title: 'Banking Portal Renewal & Microservices Migration',
-    //   description:
-    //     'Redesigning an outdated banking frontend and monolithic backend into a modern ' +
-    //     'microservices-based infrastructure — improving customer experience and internal ' +
-    //     'development velocity.',
-    //   linkText: 'View case study',
-    //   accent: true,
-    // },
+     {
+       tag: 'ARTICLE',
+       title: 'A Pragmatic Guide to Spring Boot Testing: From Web Slices to Full E2E with Testcontainers and WireMock',
+       description:
+         '<p>Modern <b><i>Spring Boot testing</i></b> requires a balanced strategy — from fast unit slices to containerized integration tests. ' +
+        'Over the past few weeks, I built a hands-on reference implementation in <b><i>Java 21</i></b> to systematically break down the entire testing pyramid:</p>' +
+        '<ul>' +
+        '<li>Web Slicing (<b>@WebMvcTest</b> & <b>@MockitoBean</b>)</li>' +
+        '<li>RBAC & Validation Boundaries</li>' +
+        '<li>Deep DTO Verification with ArgumentCaptor</li>' +
+        '<li>Containerized Persistence (<b>@DataJpaTest</b> & <b>Testcontainers</b> with <b>@ServiceConnection</b>)</li>' +
+        '<li>Full E2E Scenarios (<b>@SpringBootTest</b>, <b>RestClient</b> & <b>WireMock</b>)</li>',
+       linkText: 'Read article',
+       link: 'https://www.linkedin.com/pulse/pragmatic-guide-spring-boot-testing-from-web-slices-full-tam%C3%A1s-b%C3%B3dis-eodwf',
+       accent: true,
+     }
     // {
     //   tag: 'INSIGHT',
     //   title: 'Why "Plain Words" Is the Best Architectural Decision',

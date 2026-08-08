@@ -14,5 +14,14 @@
 }
 .tag.accent { color: var(--cyan); background: rgba(88, 203, 251, 0.15); }
 .hub-card h4 { font-family: var(--font-display); font-size: 20px; color: var(--white); }
-.hub-card p { font-size: 14px; color: var(--mist); line-height: 1.7; }
+.hub-card .description {
+  font-size: 14px;
+  color: var(--mist);
+  line-height: 1.7;
+
+  p { margin-bottom: 0.75rem; }
+  ul, ol { margin-bottom: 0.75rem; padding-left: 1.25rem; }
+  li:last-child { margin-bottom: 0; }
+  p:last-child, ul:last-child, ol:last-child { margin-bottom: 0; }
+}
 .read-more { color: var(--cyan); font-size: 13px; font-weight: 600; text-decoration: none; font-family: var(--font-code); }

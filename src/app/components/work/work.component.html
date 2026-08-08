@@ -10,8 +10,8 @@
         <div class="hub-card h-100 p-4">
           <span class="tag mb-3" [class.accent]="item.accent">{{ item.tag }}</span>
           <h4 class="mb-3">{{ item.title }}</h4>
-          <p class="mb-4">{{ item.description }}</p>
-          <a href="#contact" class="read-more">{{ item.linkText }} →</a>
+          <div class="mb-4 description" [innerHTML]="item.description"></div>
+          <a href="{{ item.link }}" target="_blank" class="read-more">{{ item.linkText }} →</a>
         </div>
       </div>
     }
