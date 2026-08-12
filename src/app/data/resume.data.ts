@@ -121,6 +121,25 @@ const RESUME_EN: ResumeData = {
   publications: [
      {
        tag: 'ARTICLE',
+       title: 'How Do You Keep Your Spring Boot Architecture Clean as Your Team and Codebase Grow?',
+       description:
+         '<p>Passive documentation and code reviews often aren\'t enough to stop architectural decay — a Controller injecting a Repository, ' +
+        'circular package dependencies, or public fields on JPA entities can easily slip through.</p>' +
+        '<p>In my latest article, I explore <b><i>ArchUnit</i></b>: a library that lets you write active, enforceable architectural rules as ' +
+        'standard <b><i>JUnit 5</i></b> tests. Here\'s what we cover with real code examples:</p>' +
+        '<ul>' +
+        '<li>Layered Architecture</li>' +
+        '<li>Package Cycles</li>' +
+        '<li>Convention Enforcement</li>' +
+        '<li>Custom Rules</li>' +
+        '<li>Framework Boundary Defense</li>' +
+        '</ul>',
+       linkText: 'Read article',
+       link: 'https://lnkd.in/p/dpXW5AUm',
+       accent: true,
+     },
+     {
+       tag: 'ARTICLE',
        title: 'A Pragmatic Guide to Spring Boot Testing: From Web Slices to Full E2E with Testcontainers and WireMock',
        description:
          '<p>Modern <b><i>Spring Boot testing</i></b> requires a balanced strategy — from fast unit slices to containerized integration tests. ' +
