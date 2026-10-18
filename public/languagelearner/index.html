@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LanguageLearner</title>
+  <meta name="description" content="LanguageLearner is an iOS app for practising English vocabulary with the word lists of your teacher. / A LanguageLearner egy iOS alkalmazás angol szókincs gyakorlására a tanárod szólistáival.">
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1b1f27; --muted: #5b6472;
+      --accent: #2a6df4; --border: #e3e7ee;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12151b; --card: #1a1f28; --text: #e8ebf1; --muted: #9aa4b2;
+        --accent: #6c9bff; --border: #2a313d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.5rem 1.5rem 1.25rem;
+    }
+    h1 { margin: 0 0 .25rem; font-size: 2rem; }
+    h2 { font-size: 1.15rem; margin: 1.75rem 0 .5rem; }
+    p, li { color: var(--text); }
+    .lead { color: var(--muted); margin-top: 0; }
+    a { color: var(--accent); }
+    ul { padding-left: 1.2rem; }
+    .lang { display: flex; gap: .5rem; margin-bottom: 1rem; }
+    .lang button {
+      border: 1px solid var(--border); background: var(--card); color: var(--text);
+      border-radius: 999px; padding: .25rem .9rem; font: inherit; cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 1.5rem; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="lang" role="group" aria-label="Language / Nyelv">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="hu" aria-pressed="false">Magyar</button>
+  </div>
+
+  <div class="card">
+    <section lang="en" data-section="en">
+      <h1>LanguageLearner</h1>
+      <p class="lead">Practise English vocabulary with the word lists of your teacher.</p>
+
+      <p>LanguageLearner is an iPhone app for students learning English. The teacher keeps the
+      words in a shared spreadsheet; every student sees the words of their own list in the app and
+      practises them in several ways:</p>
+      <ul>
+        <li><strong>Flashcards</strong> with the English word read aloud;</li>
+        <li><strong>Pair matching</strong> of English and Hungarian words;</li>
+        <li><strong>Multiple choice</strong> with four alternatives and statistics;</li>
+        <li><strong>Exact typing</strong> of the translation, with a hint button;</li>
+        <li><strong>Mix</strong> of all of the above.</li>
+      </ul>
+
+      <h2>Who can use it</h2>
+      <p>The app is for the students of the teacher. Signing in uses your Google account; only
+      accounts that the teacher has added to the student list can see words.</p>
+
+      <h2>Your data</h2>
+      <p>The app uses your Google account only to recognise you (e-mail address and name) and
+      stores the results of your practice so that your progress can be followed. Details are in the
+      <a href="/languagelearner/privacy/">privacy policy</a>.</p>
+
+      <h2>Contact</h2>
+      <p><a href="mailto:tamas.bodis@btimpl.eu">tamas.bodis@btimpl.eu</a></p>
+    </section>
+
+    <section lang="hu" data-section="hu" hidden>
+      <h1>LanguageLearner</h1>
+      <p class="lead">Gyakorold az angol szókincset a tanárod szólistáival.</p>
+
+      <p>A LanguageLearner egy iPhone alkalmazás angolul tanulóknak. A tanár egy megosztott
+      táblázatban vezeti a szavakat; minden diák az alkalmazásban a saját listájának szavait látja,
+      és többféleképpen gyakorolhatja őket:</p>
+      <ul>
+        <li><strong>Szókártyák</strong> felolvasott angol szóval;</li>
+        <li><strong>Párosító</strong> angol és magyar szavakból;</li>
+        <li><strong>Tanuló</strong> négy válaszlehetőséggel és statisztikával;</li>
+        <li><strong>Pontos egyezés</strong>: a fordítást pontosan be kell gépelni, segítség gombbal;</li>
+        <li><strong>Mix</strong> a fentiekből.</li>
+      </ul>
+
+      <h2>Kik használhatják</h2>
+      <p>Az alkalmazás a tanár diákjainak készült. A belépés a Google-fiókoddal történik; csak azok
+      a fiókok látnak szavakat, amelyeket a tanár felvett a diáklistára.</p>
+
+      <h2>Az adataid</h2>
+      <p>Az alkalmazás a Google-fiókodat csak a felismerésedhez használja (e-mail-cím és név),
+      és eltárolja a gyakorlás eredményeit, hogy a haladásod követhető legyen. A részletek az
+      <a href="/languagelearner/privacy/">adatvédelmi nyilatkozatban</a> találhatók.</p>
+
+      <h2>Kapcsolat</h2>
+      <p><a href="mailto:tamas.bodis@btimpl.eu">tamas.bodis@btimpl.eu</a></p>
+    </section>
+  </div>
+
+  <footer>&copy; BTImpl &middot; <a href="/languagelearner/privacy/">Privacy policy / Adatvédelmi nyilatkozat</a></footer>
+</main>
+
+<script>
+  (function () {
+    var sections = document.querySelectorAll('[data-section]');
+    var buttons = document.querySelectorAll('.lang button');
+    function show(lang) {
+      sections.forEach(function (s) { s.hidden = s.getAttribute('data-section') !== lang; });
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('ll-lang', lang); } catch (e) {}
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-lang')); }); });
+    var saved = null;
+    try { saved = localStorage.getItem('ll-lang'); } catch (e) {}
+    show(saved || ((navigator.language || '').toLowerCase().indexOf('hu') === 0 ? 'hu' : 'en'));
+  })();
+</script>
+</body>
+</html>

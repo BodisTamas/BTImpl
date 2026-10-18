@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LanguageLearner &ndash; Privacy policy / Adatvédelmi nyilatkozat</title>
+  <meta name="description" content="Privacy policy of the LanguageLearner app. / A LanguageLearner alkalmazás adatvédelmi nyilatkozata.">
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1b1f27; --muted: #5b6472;
+      --accent: #2a6df4; --border: #e3e7ee;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12151b; --card: #1a1f28; --text: #e8ebf1; --muted: #9aa4b2;
+        --accent: #6c9bff; --border: #2a313d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.5rem 1.5rem 1.25rem;
+    }
+    h1 { margin: 0 0 .25rem; font-size: 1.8rem; }
+    h2 { font-size: 1.1rem; margin: 1.75rem 0 .5rem; }
+    .lead { color: var(--muted); margin-top: 0; }
+    a { color: var(--accent); }
+    ul { padding-left: 1.2rem; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; }
+    .lang { display: flex; gap: .5rem; margin-bottom: 1rem; }
+    .lang button {
+      border: 1px solid var(--border); background: var(--card); color: var(--text);
+      border-radius: 999px; padding: .25rem .9rem; font: inherit; cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 1.5rem; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="lang" role="group" aria-label="Language / Nyelv">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="hu" aria-pressed="false">Magyar</button>
+  </div>
+
+  <div class="card">
+    <section lang="en" data-section="en">
+      <h1>Privacy policy</h1>
+      <p class="lead">LanguageLearner app &middot; last updated 18 October 2026</p>
+
+      <h2>1. Who is responsible for your data</h2>
+      <p>The controller of the data described here is Tamás Bodis (BTImpl), a private person
+      operating the LanguageLearner app and its server. Contact:
+      <a href="mailto:tamas.bodis@btimpl.eu">tamas.bodis@btimpl.eu</a>.</p>
+
+      <h2>2. What the app is</h2>
+      <p>LanguageLearner is an iPhone app for practising English vocabulary. The words come from a
+      spreadsheet kept by the teacher. The app is meant for the students of that teacher;
+      only accounts the teacher has listed can use it.</p>
+
+      <h2>3. What data is processed</h2>
+      <table>
+        <tr><th>Data</th><th>Where it comes from</th><th>What it is used for</th></tr>
+        <tr>
+          <td>Your e-mail address and name</td>
+          <td>Your Google account (sign-in with the scopes <em>openid</em>, <em>email</em> and
+          <em>profile</em>), and the student list of the teacher</td>
+          <td>To recognise you and to find the words of your own list</td>
+        </tr>
+        <tr>
+          <td>The words of your list</td>
+          <td>The teacher's spreadsheet</td>
+          <td>To show them in the app. The server reads them with a service account that has
+          read-only access to the spreadsheet</td>
+        </tr>
+        <tr>
+          <td>The results of your practice: which word and deck, in which practice mode, whether
+          the answer was right at the first try, with help or wrong, and when</td>
+          <td>Created by you while practising</td>
+          <td>To show your statistics and to let the teacher follow your progress</td>
+        </tr>
+      </table>
+      <p>The app also keeps your settings and practice statistics on your own device.</p>
+      <p>The app does <strong>not</strong> use advertising, analytics or tracking, does not
+      access your contacts, location, photos or microphone, and does not read anything else from
+      your Google account (no Gmail, Drive, calendar or other data). Your Google password is never
+      seen by the app or the server.</p>
+
+      <h2>4. Legal basis</h2>
+      <p>Your consent (Article 6(1)(a) GDPR), which you give by signing in to the app after the
+      teacher has added you to the list. You can withdraw it at any time by asking for deletion
+      (see section 8). If the student is under 16, the consent of the parent or legal guardian is
+      needed.</p>
+
+      <h2>5. Who else receives the data</h2>
+      <p>The data is not sold or passed on for any other purpose. It is processed on our behalf
+      by these providers:</p>
+      <ul>
+        <li><strong>Google</strong> &ndash; sign-in, the spreadsheet (Google Sheets) and the server
+        hosting (Google Cloud Run, region Belgium, EU);</li>
+        <li><strong>Neon</strong> &ndash; the database in which the students and the results are
+        stored (region Frankfurt, Germany, EU).</li>
+      </ul>
+      <p>The teacher, who owns the spreadsheet, can see the words and, in a later version of the
+      service, the results of their own students.</p>
+
+      <h2>6. How long it is kept</h2>
+      <p>Until you ask for deletion, or until you stop using the app and the teacher removes you
+      from the student list; the stored results are then deleted on request.</p>
+
+      <h2>7. Security</h2>
+      <p>All traffic between the app and the server is encrypted (HTTPS). The server accepts only
+      requests with a valid Google sign-in token and only for accounts on the student list.
+      Every student can reach only their own data. Database credentials are kept in a secret
+      manager, not in the code.</p>
+
+      <h2>8. Your rights</h2>
+      <p>You can ask for access to your data, correction, deletion, restriction of processing and
+      a copy of your data, and you can object to the processing. Send an e-mail to
+      <a href="mailto:tamas.bodis@btimpl.eu">tamas.bodis@btimpl.eu</a>; the request is answered
+      within 30 days. You can also complain to the Hungarian data protection authority
+      (Nemzeti Adatvédelmi és Információszabadság Hatóság, NAIH,
+      <a href="https://www.naih.hu">www.naih.hu</a>) or go to court.</p>
+
+      <h2>9. Changes</h2>
+      <p>If this policy changes, the new version is published on this page with a new date.</p>
+    </section>
+
+    <section lang="hu" data-section="hu" hidden>
+      <h1>Adatvédelmi nyilatkozat</h1>
+      <p class="lead">LanguageLearner alkalmazás &middot; utolsó módosítás: 2026. október 18.</p>
+
+      <h2>1. Ki felel az adataidért</h2>
+      <p>Az itt leírt adatok kezelője Bodis Tamás (BTImpl), magánszemély, aki a LanguageLearner
+      alkalmazást és szerverét üzemelteti. Elérhetőség:
+      <a href="mailto:tamas.bodis@btimpl.eu">tamas.bodis@btimpl.eu</a>.</p>
+
+      <h2>2. Mi az alkalmazás</h2>
+      <p>A LanguageLearner egy iPhone alkalmazás angol szókincs gyakorlására. A szavak a tanár
+      által vezetett táblázatból érkeznek. Az alkalmazás a tanár diákjainak készült; csak azok a
+      fiókok használhatják, amelyeket a tanár felvett a listára.</p>
+
+      <h2>3. Milyen adatokat kezelünk</h2>
+      <table>
+        <tr><th>Adat</th><th>Honnan származik</th><th>Mire használjuk</th></tr>
+        <tr>
+          <td>Az e-mail-címed és a neved</td>
+          <td>A Google-fiókod (belépés az <em>openid</em>, <em>email</em> és <em>profile</em>
+          jogosultsággal) és a tanár diáklistája</td>
+          <td>A felismerésedre és a saját listád szavainak megkeresésére</td>
+        </tr>
+        <tr>
+          <td>A listád szavai</td>
+          <td>A tanár táblázata</td>
+          <td>Az alkalmazásban való megjelenítésre. A szerver egy olyan szolgáltatásfiókkal olvassa
+          őket, amelynek csak olvasási joga van a táblázathoz</td>
+        </tr>
+        <tr>
+          <td>A gyakorlásod eredményei: melyik szó és pakli, melyik gyakorló módban, elsőre
+          jó, segítséggel jó vagy rossz volt-e a válasz, és mikor</td>
+          <td>A gyakorlás közben keletkeznek</td>
+          <td>A statisztikáid megjelenítésére és arra, hogy a tanár követhesse a haladásodat</td>
+        </tr>
+      </table>
+      <p>Az alkalmazás a beállításaidat és a gyakorlási statisztikáidat a saját eszközödön is tárolja.</p>
+      <p>Az alkalmazás <strong>nem</strong> használ reklámot, analitikát vagy nyomkövetést, nem fér
+      hozzá a névjegyzékedhez, a helyzetedhez, a fotóidhoz vagy a mikrofonodhoz, és a Google-fiókodból
+      semmi mást nem olvas ki (nem fér hozzá a Gmailhez, a Drive-hoz, a naptárhoz vagy más adathoz).
+      A Google-jelszavadat sem az alkalmazás, sem a szerver nem látja.</p>
+
+      <h2>4. Jogalap</h2>
+      <p>A hozzájárulásod (GDPR 6. cikk (1) bekezdés a) pont), amelyet azzal adsz meg, hogy belépsz
+      az alkalmazásba, miután a tanár felvett a listára. A hozzájárulást bármikor visszavonhatod a
+      törlés kérésével (lásd a 8. pontot). Ha a diák 16 évesnél fiatalabb, a szülő vagy a törvényes
+      képviselő hozzájárulása szükséges.</p>
+
+      <h2>5. Kik kapják még az adatokat</h2>
+      <p>Az adatokat nem adjuk el, és más célra nem adjuk tovább. A nevünkben ezek a szolgáltatók
+      kezelik őket:</p>
+      <ul>
+        <li><strong>Google</strong> &ndash; belépés, a táblázat (Google Táblázatok) és a szerver
+        üzemeltetése (Google Cloud Run, Belgium, EU);</li>
+        <li><strong>Neon</strong> &ndash; az adatbázis, amelyben a diákok és az eredmények tárolódnak
+        (Frankfurt, Németország, EU).</li>
+      </ul>
+      <p>A tanár, aki a táblázat tulajdonosa, látja a szavakat, és a szolgáltatás egy későbbi
+      változatában a saját diákjai eredményeit is.</p>
+
+      <h2>6. Meddig őrizzük meg</h2>
+      <p>Amíg a törlését nem kéred, vagy amíg abba nem hagyod az alkalmazás használatát és a tanár ki
+      nem vesz a diáklistából; ilyenkor a tárolt eredményeket kérésre töröljük.</p>
+
+      <h2>7. Biztonság</h2>
+      <p>Az alkalmazás és a szerver közötti teljes forgalom titkosított (HTTPS). A szerver csak
+      érvényes Google belépési tokennel érkező kéréseket fogad el, és csak a diáklistán szereplő
+      fiókoktól. Minden diák csak a saját adatait érheti el. Az adatbázis hozzáférési adatait titokkezelő
+      szolgáltatás őrzi, nem a kód.</p>
+
+      <h2>8. A jogaid</h2>
+      <p>Kérheted az adataidhoz való hozzáférést, a helyesbítést, a törlést, az adatkezelés
+      korlátozását és az adataid másolatát, és tiltakozhatsz az adatkezelés ellen. Írj e-mailt a
+      <a href="mailto:tamas.bodis@btimpl.eu">tamas.bodis@btimpl.eu</a> címre; a kérésre 30 napon belül
+      válaszolunk. Panaszt tehetsz a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH,
+      <a href="https://www.naih.hu">www.naih.hu</a>), vagy bírósághoz fordulhatsz.</p>
+
+      <h2>9. Módosítások</h2>
+      <p>Ha ez a nyilatkozat megváltozik, az új változatot új dátummal ezen az oldalon tesszük
+      közzé.</p>
+    </section>
+  </div>
+
+  <footer><a href="/languagelearner/">&larr; LanguageLearner</a></footer>
+</main>
+
+<script>
+  (function () {
+    var sections = document.querySelectorAll('[data-section]');
+    var buttons = document.querySelectorAll('.lang button');
+    function show(lang) {
+      sections.forEach(function (s) { s.hidden = s.getAttribute('data-section') !== lang; });
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('ll-lang', lang); } catch (e) {}
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-lang')); }); });
+    var saved = null;
+    try { saved = localStorage.getItem('ll-lang'); } catch (e) {}
+    show(saved || ((navigator.language || '').toLowerCase().indexOf('hu') === 0 ? 'hu' : 'en'));
+  })();
+</script>
+</body>
+</html>
